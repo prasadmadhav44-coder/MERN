@@ -1,0 +1,40 @@
+/* Styles for day-1 todo landing page */
+:root{
+  --accent: orange;
+  --accent-dark: #cc8400;
+  --text: #ffffff;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;}
+.hero{
+  min-height:100vh;
+  background-image:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://ik.imagekit.io/4z8covdo9/Full%20stack/todolistbg.png?updatedAt=1700761069523');
+  background-size:cover;
+  background-position:center center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  color:var(--text);
+  position:relative;
+}
+.overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.6));}
+.top{position:relative;z-index:1;width:100%;display:flex;align-items:center;justify-content:center;padding-top:28px}
+.logo{position:absolute;left:20px;top:18px;background:rgba(255,255,255,0.08);width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.site-title{font-size:56px;margin:0;font-weight:700;letter-spacing:1px}
+.container{position:relative;z-index:1;max-width:760px;width:100%;text-align:center;padding:28px 20px;display:flex;flex-direction:column;align-items:center}
+.lead{font-size:18px;margin:12px 0 32px;color:rgba(255,255,255,0.95);max-width:560px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));padding:28px;border-radius:8px;backdrop-filter: blur(4px);box-shadow:0 6px 18px rgba(0,0,0,0.45);text-align:left;width:88%;max-width:540px}
+.card-title{color:var(--text);margin:0 0 8px;font-size:22px;font-weight:700}
+.card-text{color:rgba(255,255,255,0.9);line-height:1.5;margin:0 0 18px}
+.cta-wrap{display:flex;flex-direction:column;align-items:center;gap:10px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 30px;border-radius:4px;text-decoration:none;font-weight:700;box-shadow:0 6px 0 var(--accent-dark);transition:transform .08s ease}
+.btn:active{transform:translateY(3px);box-shadow:none}
+.skip{color:rgba(255,255,255,0.8);text-decoration:underline;font-size:14px}
+
+/* Responsive tweaks */
+@media (max-width:480px){
+  .site-title{font-size:42px}
+  .card{width:92%;padding:20px}
+  .lead{font-size:15px}
+}
