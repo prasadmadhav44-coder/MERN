@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>CSS Basics — Day 3</title>
+	<link rel="stylesheet" href="../css/day-2.css">
+	<style>
+		/* Internal CSS example (styles written inside this HTML file) */
+		.internal-demo { color: rebeccapurple; font-weight:600; }
+		.precedence { margin-top:8px; }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>CSS Basics</h1>
+		<p class="lead">Quick examples to learn selectors, properties, and the box model.</p>
+	</header>
+
+	<main>
+		<section>
+			<h2>How to include CSS</h2>
+			<p>There are three common ways to add CSS. Each is shown below with a short explanation and a simple code sample.</p>
+
+			<h3>1) External CSS (recommended)</h3>
+			<p>Put styles in a separate file and link it with a <code>&lt;link&gt;</code>. Good for reuse and maintainability.</p>
+			<pre class="code">&lt;!-- in the HTML head --&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+
+/* in styles.css */
+.external-demo { color: #c0392b; }</pre>
+
+			<h3>2) Internal CSS</h3>
+			<p>Write CSS inside a <code>&lt;style&gt;</code> tag in the HTML head. Useful for page-specific styles.</p>
+			<pre class="code">&lt;style&gt;
+.internal-demo { color: rebeccapurple; }
+&lt;/style&gt;</pre>
+
+			<h3>3) Inline CSS</h3>
+			<p>Use the <code>style</code> attribute directly on an element. Easy but not recommended for large sites.</p>
+			<pre class="code">&lt;div style="color:green; font-weight:700;"&gt;Inline styled text&lt;/div&gt;</pre>
+
+			<h3>Precedence (which wins?)</h3>
+			<p>Inline styles override internal and external styles. Internal overrides external when selectors are equal.</p>
+			<div class="precedence">
+				<p class="external-demo">This paragraph is styled by external CSS (.external-demo).</p>
+				<p class="internal-demo">This paragraph is styled by internal CSS (.internal-demo).</p>
+				<p class="external-demo internal-demo" style="color:green;">This has external + internal classes but an inline style — inline wins (shows green).</p>
+			</div>
+		</section>
+
+		<section>
+			<h2>Selectors</h2>
+			<p>Common selectors:</p>
+			<pre class="code">/* element */
+p { color: #444; }
+
+/* class */
+.highlight { background: #453a10; }
+
+/* id */
+#main-title { font-size: 28px; }
+
+/* descendant */
+nav a { text-decoration: none; }</pre>
+		</section>
+
+
+		<section>
+			<h2>Box model</h2>
+			<p>The box model controls layout: <strong>content → padding → border → margin</strong>.</p>
+			<div class="demo-row">
+				<div class="box">Content<br><small>.box</small></div>
+				<div class="box padded">Padded<br><small>.box.padded</small></div>
+			</div>
+			<pre class="code">.box { width:150px; border:2px solid #2b6; padding:8px; margin:8px; }</pre>
+		</section>
+
+		<section>
+			<h2>Properties you should know</h2>
+			<ul>
+				<li><strong>color</strong> — text color</li>
+				<li><strong>background</strong> — background color or image</li>
+				<li><strong>font-size / font-family</strong> — typography</li>
+				<li><strong>display</strong> — block / inline / flex / grid</li>
+				<li><strong>position</strong> — static / relative / absolute / fixed / sticky</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Class vs ID</h2>
+			<p>Use classes for reusable styles and IDs for unique elements.</p>
+			<div class="class-demo">This uses a <strong>class</strong></div>
+			<div id="id-demo">This uses an <strong>id</strong></div>
+		</section>
+
+		<section>
+			<h2>Simple layout with Flexbox</h2>
+			<div class="flex-row">
+				<div class="card">Item 1</div>
+				<div class="card">Item 2</div>
+				<div class="card">Item 3</div>
+			</div>
+			<pre class="code">.flex-row { display:flex; gap:12px; }
+.card { flex:1; padding:12px; background:#f6f6ff; }</pre>
+		</section>
+
+		<footer>
+			<p class="note">Try editing the CSS file <em>css/day-3.css</em> to see changes live.</p>
+		</footer>
+	</main>
+</body>
+</html>
