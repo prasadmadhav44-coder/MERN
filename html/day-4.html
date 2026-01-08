@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap vs Tailwind day-4</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/day-3.css">
+</head>
+<body class="p-4">
+
+  <!-- Bootstrap navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bsNavbar" aria-controls="bsNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="bsNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#bootstrap">Bootstrap</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tailwind">Tailwind</a></li>
+          <li class="nav-item"><a class="nav-link" href="#comparison">Comparison</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="mb-4">
+    <h1 class="h3">Bootstrap vs Tailwind — Simple Comparison</h1>
+    <p class="text-muted small">Two popular CSS approaches: component-driven (Bootstrap) and utility-first (Tailwind).</p>
+  </header>
+
+  <!-- Tailwind navbar example -->
+  <div class="mb-4">
+    <nav class="flex items-center justify-between flex-wrap bg-white p-3 rounded shadow-sm">
+      <div class="flex items-center flex-shrink-0 text-gray-800 mr-6">
+        <span class="font-semibold text-xl tracking-tight">Demo</span>
+      </div>
+      <div class="block lg:hidden">
+        <button class="px-3 py-2 border rounded text-gray-700">Menu</button>
+      </div>
+      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow">
+          <a href="#bootstrap" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-4">Bootstrap</a>
+          <a href="#tailwind" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900 mr-4">Tailwind</a>
+          <a href="#comparison" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gray-900">Comparison</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section id="bootstrap" class="mb-5">
+    <h2 class="h4">Bootstrap (component-based)</h2>
+    <p>Bootstrap offers pre-built components and a responsive grid. Great for quick UIs.</p>
+
+    <div class="mb-3">
+      <button class="btn btn-primary">Bootstrap Button</button>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap Card</h5>
+            <p class="card-text">A simple card using Bootstrap classes for layout and spacing.</p>
+            <a href="#" class="btn btn-outline-secondary">Action</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <pre class="code-box"><code>&lt;button class="btn btn-primary"&gt;Bootstrap Button&lt;/button&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section id="tailwind" class="mb-5">
+    <h2 class="h4">Tailwind CSS (utility-first)</h2>
+    <p>Tailwind provides low-level utility classes to compose custom designs without pre-styled components.</p>
+
+    <div class="mb-3">
+      <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Tailwind Button</button>
+    </div>
+
+    <div class="md:grid md:grid-cols-2 md:gap-4">
+      <div class="p-4 border rounded shadow">
+        <h3 class="text-lg font-semibold">Tailwind Card</h3>
+        <p class="text-sm text-gray-700">A similar card built by composing utility classes.</p>
+        <button class="mt-2 bg-transparent border border-gray-300 px-3 py-1 rounded">Action</button>
+      </div>
+      <div>
+        <pre class="code-box"><code>&lt;button class="bg-blue-600 text-white py-2 px-4 rounded"&gt;Tailwind Button&lt;/button&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section id="comparison">
+    <h2 class="h4">Key Differences</h2>
+    <ul>
+      <li><strong>Bootstrap:</strong> Ready components, consistent look, faster for standard UIs.</li>
+      <li><strong>Tailwind:</strong> Utility classes, highly custom, smaller final CSS if purged/optimized.</li>
+    </ul>
+  </section>
+
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
