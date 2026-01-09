@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Web Fundamentals — Day-5</title>
+  <link rel="stylesheet" href="../css/day-4.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📚 Complete Web Fundamentals</h1>
+      <p>A comprehensive guide explaining Days 1-3 concepts</p>
+    </div>
+
+    <div class="content">
+      <!-- DAY 1: HTML BASICS -->
+      <section>
+        <h2>📝 Day 1: HTML Fundamentals</h2>
+        
+        <h3>What is HTML?</h3>
+        <div class="explanation">
+          HTML (HyperText Markup Language) is the foundation of web pages. It provides structure and meaning to content using tags. Think of it as the skeleton of a website.
+        </div>
+
+        <h3>Document Structure</h3>
+        <div class="code-example">
+&lt;!DOCTYPE html&gt;          &lt;!-- Declares HTML5 document --&gt;
+&lt;html lang="en"&gt;        &lt;!-- Root element --&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Page content goes here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </div>
+
+        <h3>📌 Key HTML Elements Explained</h3>
+        
+        <div class="tag-list">
+          <div class="tag-item">
+            <code>&lt;h1&gt; to &lt;h6&gt;</code><br>
+            Heading tags. h1 is most important, h6 is least. Use hierarchically.
+          </div>
+          <div class="tag-item">
+            <code>&lt;p&gt;</code><br>
+            Paragraph text. Automatically adds spacing before and after.
+          </div>
+          <div class="tag-item">
+            <code>&lt;b&gt; vs &lt;strong&gt;</code><br>
+            b = bold styling. strong = bold + semantic importance.
+          </div>
+          <div class="tag-item">
+            <code>&lt;i&gt; vs &lt;em&gt;</code><br>
+            i = italic styling. em = italic + emphasis meaning.
+          </div>
+          <div class="tag-item">
+            <code>&lt;mark&gt;</code><br>
+            Highlights text like a marker pen. Shows importance.
+          </div>
+          <div class="tag-item">
+            <code>&lt;small&gt;</code><br>
+            Smaller text. Good for disclaimers, fine print.
+          </div>
+        </div>
+
+        <h3>Lists in HTML</h3>
+        <div class="explanation">
+          <strong>Ordered List (&lt;ol&gt;):</strong> Numbered lists with sequence importance (1, 2, 3 or A, B, C or i, ii, iii)<br>
+          <strong>Unordered List (&lt;ul&gt;):</strong> Bullet-point lists where order doesn't matter
+        </div>
+
+        <div class="code-example">
+&lt;ol&gt;                    &lt;ul&gt;
+  &lt;li&gt;First&lt;/li&gt;         &lt;li&gt;Item A&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;        &lt;li&gt;Item B&lt;/li&gt;
+  &lt;li&gt;Third&lt;/li&gt;         &lt;li&gt;Item C&lt;/li&gt;
+&lt;/ol&gt;                  &lt;/ul&gt;
+        </div>
+
+        <h3>Links & Navigation</h3>
+        <div class="code-example">
+&lt;a href="https://example.com"&gt;External Link&lt;/a&gt;
+&lt;a href="page.html"&gt;Internal Link&lt;/a&gt;
+&lt;a href="https://example.com" target="_blank"&gt;Opens in new tab&lt;/a&gt;
+        </div>
+
+        <div class="tip">
+          <strong>🎯 Link Target Attributes:</strong><br>
+          • target="_blank" → Opens in new tab<br>
+          • target="_self" → Same window (default)<br>
+          • target="_parent" → Parent frame<br>
+          • target="_top" → Top frame
+        </div>
+
+        <h3>Images, Audio & Video</h3>
+        <div class="code-example">
+&lt;img src="image.jpg" alt="Description"&gt;
+&lt;audio src="song.mp3" controls&gt;&lt;/audio&gt;
+&lt;video src="movie.mp4" controls width="300" height="500"&gt;&lt;/video&gt;
+        </div>
+
+        <h3>Tables</h3>
+        <div class="code-example">
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;  &lt;!-- Table header --&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Data 1&lt;/td&gt;     &lt;!-- Table data --&gt;
+    &lt;td&gt;Data 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+        </div>
+
+        <h3>Forms for User Input</h3>
+        <div class="code-example">
+&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name"&gt;
+  
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+  
+  &lt;select name="option"&gt;
+    &lt;option value="1"&gt;Choice 1&lt;/option&gt;
+  &lt;/select&gt;
+  
+  &lt;textarea name="message"&gt;&lt;/textarea&gt;
+  &lt;input type="submit" value="Send"&gt;
+&lt;/form&gt;
+        </div>
+
+        <h3>Semantic HTML Tags</h3>
+        <div class="explanation">
+          Semantic tags give meaning to content for browsers and screen readers.
+        </div>
+
+        <div class="tag-list">
+          <div class="tag-item">
+            <code>&lt;header&gt;</code> - Top section with navigation
+          </div>
+          <div class="tag-item">
+            <code>&lt;nav&gt;</code> - Navigation links
+          </div>
+          <div class="tag-item">
+            <code>&lt;main&gt;</code> - Primary content
+          </div>
+          <div class="tag-item">
+            <code>&lt;article&gt;</code> - Independent content piece
+          </div>
+          <div class="tag-item">
+            <code>&lt;section&gt;</code> - Thematic grouping
+          </div>
+          <div class="tag-item">
+            <code>&lt;footer&gt;</code> - Bottom section
+          </div>
+        </div>
+
+        <h3>HTML Entities</h3>
+        <div class="code-example">
+&copy;  = Copyright symbol ©
+&reg;   = Registered ®
+&trade; = Trademark ™
+&pound; = Pound sign £
+&nbsp;  = Non-breaking space
+&lt;    = Less than &lt;
+&gt;    = Greater than &gt;
+        </div>
+      </section>
+
+      <!-- DAY 2: CSS FUNDAMENTALS & STYLING -->
+      <section>
+        <h2>🎨 Day 2: CSS Styling & Design</h2>
+
+        <h3>What is CSS?</h3>
+        <div class="explanation">
+          CSS (Cascading Style Sheets) controls the visual appearance of HTML elements. It's the "skin" that makes websites look good.
+        </div>
+
+        <h3>Three Ways to Add CSS</h3>
+        
+        <h4>1️⃣ External CSS (Recommended)</h4>
+        <div class="code-example">
+&lt;!-- In HTML head --&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+
+/* In separate styles.css file */
+body { font-family: Arial; }
+.heading { color: blue; }
+        </div>
+        <div class="explanation">
+          <strong>Advantages:</strong> Reusable across multiple pages, easy to maintain, keeps HTML clean
+        </div>
+
+        <h4>2️⃣ Internal CSS</h4>
+        <div class="code-example">
+&lt;style&gt;
+  body { background: white; }
+  .title { color: purple; }
+&lt;/style&gt;
+        </div>
+        <div class="explanation">
+          <strong>Use when:</strong> Styling is specific to one page only
+        </div>
+
+        <h4>3️⃣ Inline CSS</h4>
+        <div class="code-example">
+&lt;p style="color: red; font-size: 18px;"&gt;Red paragraph&lt;/p&gt;
+        </div>
+        <div class="explanation">
+          <strong>Avoid!</strong> Harder to maintain, mixes content and style, poor reusability
+        </div>
+
+        <h3>CSS Specificity & Precedence</h3>
+        <div class="tip">
+          <strong>🎯 Which CSS wins?</strong><br>
+          Inline styles > Internal styles > External styles<br>
+          More specific selectors override less specific ones
+        </div>
+
+        <div class="comparison">
+          <div class="good">
+            <strong>✅ Good Practice:</strong><br>
+            External CSS file<br>
+            Organized and reusable<br>
+            Easy to update<br>
+            Professional structure
+          </div>
+          <div class="bad">
+            <strong>❌ Avoid:</strong><br>
+            Inline styles everywhere<br>
+            Hard to maintain<br>
+            Difficult to update<br>
+            Messy HTML
+          </div>
+        </div>
+
+        <h3>CSS Selectors</h3>
+        <div class="code-example">
+/* Element selector */
+p { color: black; }
+
+/* Class selector (multiple elements) */
+.highlight { background: yellow; }
+
+/* ID selector (single element) */
+#main-title { font-size: 24px; }
+
+/* Descendant selector */
+div p { margin: 10px; }
+
+/* Multiple selectors */
+h1, h2, h3 { font-family: Arial; }
+        </div>
+
+        <h3>🎯 Class vs ID</h3>
+        <div class="comparison">
+          <div>
+            <strong>Classes (.class-name)</strong><br>
+            ✓ Reusable on many elements<br>
+            ✓ Good for styling patterns<br>
+            ✓ Recommended for CSS<br>
+            <code>.button { padding: 10px; }</code>
+          </div>
+          <div>
+            <strong>IDs (#id-name)</strong><br>
+            ✓ Unique to one element<br>
+            ✓ Higher specificity<br>
+            ✓ Use for JavaScript hooks<br>
+            <code>#header { position: fixed; }</code>
+          </div>
+        </div>
+
+        <h3>Common CSS Properties</h3>
+        <div class="code-example">
+/* Text & Font */
+color: #333;              /* Text color */
+font-family: Arial;       /* Font type */
+font-size: 16px;          /* Text size */
+font-weight: 700;         /* Bold (400-700) */
+text-align: center;       /* Alignment */
+line-height: 1.5;         /* Space between lines */
+
+/* Colors & Background */
+background: #f0f0f0;      /* Background color */
+background-image: url(); /* Background image */
+opacity: 0.8;             /* Transparency */
+
+/* Spacing */
+margin: 20px;             /* Space outside element */
+padding: 15px;            /* Space inside element */
+
+/* Sizing */
+width: 100%;              /* Element width */
+height: 200px;            /* Element height */
+
+/* Display & Layout */
+display: block;           /* Full width */
+display: inline;          /* Inline with text */
+display: flex;            /* Flexible layout */
+display: grid;            /* Grid layout */
+        </div>
+
+        <h3>The Box Model</h3>
+        <div class="explanation">
+          Every HTML element is a box with: <strong>Content → Padding → Border → Margin</strong>
+        </div>
+
+        <div class="visual-demo">
+          <div style="width: 200px; margin: 20px auto; border: 3px solid #2563eb; padding: 20px; background: #dbeafe;">
+            <div style="background: white; padding: 15px; text-align: center; border: 2px dashed #666;">
+              <strong>Content</strong>
+            </div>
+            <p style="text-align: center; color: #666; margin: 5px 0; font-size: 12px;">↑ Padding ↑</p>
+          </div>
+        </div>
+
+        <div class="code-example">
+.box {
+  width: 300px;
+  padding: 20px;        /* Inside space */
+  border: 2px solid;    /* Edge */
+  margin: 30px;         /* Outside space */
+}
+        </div>
+
+        <h3>Positioning</h3>
+        <div class="code-example">
+position: static;      /* Default, normal flow */
+position: relative;    /* Relative to its normal position */
+position: absolute;    /* Relative to parent container */
+position: fixed;       /* Fixed to viewport */
+position: sticky;      /* Sticky while scrolling */
+        </div>
+      </section>
+
+      <!-- DAY 3: FLEXBOX & LAYOUTS -->
+      <section>
+        <h2>📐 Day 3: Flexbox & Modern Layouts</h2>
+
+        <h3>What is Flexbox?</h3>
+        <div class="explanation">
+          Flexbox (Flexible Box Layout) is a powerful CSS layout model for arranging items in rows or columns. Perfect for responsive designs.
+        </div>
+
+        <h3>Basic Flexbox Structure</h3>
+        <div class="code-example">
+.flex-container {
+  display: flex;          /* Enable flexbox */
+  flex-direction: row;    /* row (default), column */
+  justify-content: center; /* Horizontal alignment */
+  align-items: center;    /* Vertical alignment */
+  gap: 20px;              /* Space between items */
+}
+
+.flex-item {
+  flex: 1;                /* Equal width/height */
+  padding: 10px;
+}
+        </div>
+
+        <h3>Flexbox Properties</h3>
+        <div class="code-example">
+/* Container Properties */
+display: flex;
+flex-direction: row | column | row-reverse | column-reverse;
+justify-content: flex-start | center | space-between | space-around;
+align-items: flex-start | center | flex-end | stretch;
+gap: 20px;              /* Space between items */
+
+/* Item Properties */
+flex: 1;                /* Grow equally */
+flex-grow: 1;           /* How much to grow */
+flex-shrink: 1;         /* How much to shrink */
+flex-basis: 200px;      /* Base size */
+        </div>
+
+        <h3>Visual Flexbox Demo</h3>
+        <div class="visual-demo">
+          <div style="display: flex; gap: 15px;">
+            <div style="flex: 1; background: #3b82f6; color: white; padding: 20px; text-align: center; border-radius: 6px;">Item 1</div>
+            <div style="flex: 1; background: #8b5cf6; color: white; padding: 20px; text-align: center; border-radius: 6px;">Item 2</div>
+            <div style="flex: 1; background: #ec4899; color: white; padding: 20px; text-align: center; border-radius: 6px;">Item 3</div>
+          </div>
+        </div>
+
+        <h3>Grid Layout Basics</h3>
+        <div class="code-example">
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  /* 3 equal columns */
+  grid-template-rows: auto auto;       /* Auto rows */
+  gap: 20px;                           /* Space between items */
+}
+
+/* Responsive grid */
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        </div>
+
+        <h3>Responsive Design Principles</h3>
+        <div class="explanation">
+          Responsive design means your website looks good on all devices: phones, tablets, and desktops.
+        </div>
+
+        <div class="code-example">
+/* Mobile-first approach */
+.container {
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .container {
+    padding: 40px;
+    font-size: 18px;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+        </div>
+
+        <div class="tip">
+          <strong>📱 Responsive Design Tips:</strong><br>
+          • Use viewport meta tag<br>
+          • Start with mobile design first<br>
+          • Use flexible widths (%, em, rem)<br>
+          • Test on real devices<br>
+          • Use media queries for breakpoints
+        </div>
+      </section>
+
+      <!-- BEST PRACTICES -->
+      <section>
+        <h2>⭐ Best Practices & Summary</h2>
+
+        <h3>HTML Best Practices</h3>
+        <div class="responsive-grid">
+          <div class="card-demo">
+            <strong>✅ Use Semantic Tags</strong><br>
+            Use &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;footer&gt; instead of divs. Better for accessibility and SEO.
+          </div>
+          <div class="card-demo">
+            <strong>✅ Proper Nesting</strong><br>
+            Always close tags properly. Don't overlap them. Keep structure clean.
+          </div>
+          <div class="card-demo">
+            <strong>✅ Use Alt Text</strong><br>
+            All images need alt="" attributes for screen readers and if image fails to load.
+          </div>
+          <div class="card-demo">
+            <strong>✅ Meaningful IDs & Classes</strong><br>
+            Use descriptive names: .card, #header, .btn-primary (not .a1, .x)
+          </div>
+        </div>
+
+        <h3>CSS Best Practices</h3>
+        <div class="responsive-grid">
+          <div class="card-demo">
+            <strong>✅ External Stylesheets</strong><br>
+            Always use external CSS files for reusability and maintainability.
+          </div>
+          <div class="card-demo">
+            <strong>✅ Use CSS Variables</strong><br>
+            Define colors and sizes once:<br>
+            <code>--primary: #2563eb;</code>
+          </div>
+          <div class="card-demo">
+            <strong>✅ Mobile First</strong><br>
+            Start with mobile styles, then add media queries for larger screens.
+          </div>
+          <div class="card-demo">
+            <strong>✅ Avoid Inline Styles</strong><br>
+            Keep HTML and CSS separate for cleaner, more maintainable code.
+          </div>
+        </div>
+
+        <h3>Learning Path Recap</h3>
+        <div class="explanation">
+          <strong>Day 1 - Foundation:</strong> HTML structure, semantic tags, forms<br>
+          <strong>Day 2 - Styling:</strong> CSS basics, selectors, box model, colors<br>
+          <strong>Day 3 - Layout:</strong> Flexbox, grid, responsive design<br>
+          <strong>Next Steps:</strong> JavaScript for interactivity, advanced layouts, animations
+        </div>
+
+        <h3>Quick Reference Cheat Sheet</h3>
+        <div class="code-example">
+/* CSS Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Common Classes */
+.container { max-width: 1200px; margin: 0 auto; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.hidden { display: none; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; }
+
+/* Useful Utilities */
+.text-center { text-align: center; }
+.mt-20 { margin-top: 20px; }
+.p-20 { padding: 20px; }
+.rounded { border-radius: 8px; }
+.shadow { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        </div>
+      </section>
+
+      <!-- KEY CONCEPTS -->
+      <section>
+        <h2>🧠 Key Takeaways</h2>
+        
+        <div style="background: #fef3c7; padding: 20px; border-left: 4px solid #f59e0b; border-radius: 6px; margin: 15px 0;">
+          <h4 style="margin-top: 0;">1. HTML Structure</h4>
+          <p>HTML provides semantic meaning. Use correct tags for the job. This helps accessibility, SEO, and code clarity.</p>
+        </div>
+
+        <div style="background: #dbeafe; padding: 20px; border-left: 4px solid #3b82f6; border-radius: 6px; margin: 15px 0;">
+          <h4 style="margin-top: 0;">2. CSS Separation</h4>
+          <p>Always separate HTML and CSS. Use external stylesheets. This makes code reusable and maintainable.</p>
+        </div>
+
+        <div style="background: #e0e7ff; padding: 20px; border-left: 4px solid #6366f1; border-radius: 6px; margin: 15px 0;">
+          <h4 style="margin-top: 0;">3. Responsive Design</h4>
+          <p>Design mobile-first, then enhance for larger screens. Use flexible layouts (Flexbox/Grid) instead of fixed widths.</p>
+        </div>
+
+        <div style="background: #dcfce7; padding: 20px; border-left: 4px solid #16a34a; border-radius: 6px; margin: 15px 0;">
+          <h4 style="margin-top: 0;">4. Box Model</h4>
+          <p>Understand margin, padding, border, and content. Master the box model and you master CSS layouts.</p>
+        </div>
+
+        <div style="background: #f3e8ff; padding: 20px; border-left: 4px solid #a855f7; border-radius: 6px; margin: 15px 0;">
+          <h4 style="margin-top: 0;">5. Practice & Experiment</h4>
+          <p>The best way to learn is by building. Create projects, break things, fix them, and build again!</p>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>📚 Complete Web Fundamentals Guide • Master the basics to build anything on the web</p>
+      <p style="margin: 10px 0 0 0; opacity: 0.8;">Keep learning, keep building, keep creating! 🚀</p>
+    </footer>
+  </div>
+</body>
+</html>
