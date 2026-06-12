@@ -1,0 +1,119 @@
+    /* .box1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    } */
+
+    /* @media (max-width: 500px) {
+    .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+    }
+    } */
+
+    /* @media (min-width: 500px) and (max-width: 800px) {
+    .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+    }
+    } */
+
+    /* .box1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    box-sizing: content-box;
+    padding: 20px;
+    }
+
+    .box2 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    box-sizing: border-box;
+    padding: 20px;
+    } */
+
+    * {
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    /* h2 {
+    padding: 2rem;
+    cursor: progress;
+    }
+
+    .box1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    } */
+
+    /* .box1 {
+    width: 300px;
+    background-color: red;
+    overflow: auto;
+    }
+
+    h2 {
+    width: 400px;
+    } */
+
+    .box2 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    }
+
+    .rotate-center {
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+    animation: rotate-center 0.6s ease-in-out both infinite;
+    }
+
+    @-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    }
+    @keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    }
+
+    .box1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: slide;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: initial;
+    }
+
+    @keyframes slide {
+    0% {
+        transform: translateX(-300px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+    }
