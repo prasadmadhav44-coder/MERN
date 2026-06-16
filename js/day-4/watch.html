@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watch</title>
+</head>
+<body>
+    <div class="2xl:container mx-auto">
+    <div class="w-[90%] mx-auto flex justify-center items-center h-screen">
+        <div class="flex flex-col items-center gap-3">
+        <h1 id="count" class="text-[48px] font-bold">0</h1>
+        <div class="flex items-center gap-5">
+            <button
+            class="py-2 px-5 rounded-lg bg-green-600 text-white"
+            id="btnStart"
+            >
+            Start
+            </button>
+            <button
+            class="py-2 px-5 rounded-lg bg-red-600 text-white"
+            id="btnStop"
+            >
+            Stop
+            </button>
+            <button
+            class="py-2 px-5 rounded-lg bg-blue-600 text-white"
+            id="btnTime"
+            >
+            Timer
+            </button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        var count = document.getElementById("count");
+        var btnStart = document.getElementById("btnStart");
+        var btnStop = document.getElementById("btnStop");
+        var btnTime = document.getElementById("btnTime");
+
+        var setI;
+        btnStart.addEventListener("click", () => {
+            setI = setInterval(() => {
+            count.textContent = parseInt(count.textContent) + 1;
+            }, [1000]);
+        });
+
+        btnStop.addEventListener("click", () => {
+            clearInterval(setI);
+        });
+
+        btnTime.addEventListener("click", () => {
+            setTimeout(() => {
+            alert("over time");
+            clearInterval(setI);
+            }, [5000]);
+        });
+
+    </script>
+
+</body>
+</html>

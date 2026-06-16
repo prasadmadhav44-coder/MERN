@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="2xl:container mx-auto">
+    <div class="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2">
+        <div class="bg-red-600 py-5 flex justify-between">
+        <!-- logo container  -->
+        <h1>Logo</h1>
+
+        <div>
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu-icon lucide-menu md:hidden"
+            id="menu"
+            >
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+            </svg>
+
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x-icon lucide-x hidden md:hidden"
+            id="cross"
+            >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+            </svg>
+        </div>
+        </div>
+
+        <div class="bg-green-600 py-5 hidden md:block" id="navItems">
+        <!-- nav items container  -->
+        <ul class="flex items-center gap-10 justify-end flex-col md:flex-row">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Profile</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        var menu = document.getElementById("menu");
+        var cross = document.getElementById("cross");
+        var navItems = document.getElementById("navItems");
+
+        menu.addEventListener("click", () => {
+        navItems.classList.toggle("hidden");
+        menu.classList.toggle("hidden");
+        cross.classList.toggle("hidden");
+        });
+        cross.addEventListener("click", () => {
+        navItems.classList.toggle("hidden");
+        menu.classList.toggle("hidden");
+        cross.classList.toggle("hidden");
+        });
+        
+    </script>
+
+</body>
+</html>
