@@ -7,8 +7,8 @@
 
 // Copy
 // var arr = [10, 20, 30, 40, 50];
-// var arr1 = [0 , ...arr];
-// console.log(arr1);
+// var arr1 = [ ...arr];
+// console.log(arr1);  
 
 // concatenation
 // var arr1 = [10, 20, 30, 40, 50];
@@ -18,7 +18,7 @@
 // object
 // let mark = {
 //   maths: 80,
-//   social: 80,
+//   social: 80,  
 // };
 
 // let total = {
@@ -121,11 +121,11 @@
 // fetchData();
 
 // Reducer
-var arr = [45];
+// var arr = [45];
 
-var reducer = arr.reduce((accumulator, currentvalue) => {
-  console.log(accumulator, currentvalue);
-  return accumulator + currentvalue;
-});
+// var reducer = arr.reduce((accumulator, currentvalue) => {
+//   console.log(accumulator, currentvalue);
+//   return accumulator + currentvalue;
+// });
 
-console.log(reducer);
+// console.log(reducer);
