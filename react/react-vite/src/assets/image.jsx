@@ -1,0 +1,1 @@
+export const CarImage ="https://ik.imagekit.io/dmvt7jk0d/MERN/car.jfif?updatedAt=1765474180258";

@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"><head>
+<title>React Day-1</title>
+</head>
+
+<body>
+
+<div id="root">
+    <p id="para">Step 2</p>
+</div>
+
+<!--Via CDN Links-->
+<!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+<!--Via Local Storage-->
+<script type="module" src="/react-basics.d4668b37.js"></script>
+<script type="module" src="/react-basics.2250201b.js"></script>
+
+<script>// Getter Methods
+const paragraphELement = document.getElementById("para"); // <p id="para">Hello World</p>
+paragraphELement.textContent = "Step 2" // Property
+;
+// Setter Methods
+const divElement = document.getElementById("root");
+const headingElement = document.createElement("h1"); // <h1>Step 3</h1>
+headingElement.textContent = "Step 3" // Property
+;
+divElement.appendChild(headingElement) // <h1>Step 3</h1>
+;
+// <h1>New React Way</h1>
+const heading2Element = React.createElement("h1", null, "New DOM Step 4");
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(heading2Element);
+/**
+ * <div id="paraent">
+ *    <div id="child">
+ *       <h1>Heading Element 1</h1>
+ *     </div>
+ * </div>
+ */ const parent = React.createElement("div", {
+    id: "paraent"
+}, [
+    React.createElement("div", {
+        id: "child"
+    }, [
+        React.createElement("h1", null, "Heading Element 1")
+    ])
+]);
+
+</script>
+
+
+
+</body></html>
