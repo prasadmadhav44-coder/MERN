@@ -1,21 +1,7 @@
 import "./style.css";
 import ReactDOM from "react-dom/client";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import { ProductLayout } from "./components/ProductLayout";
-import Herosection from "./components/Herosection";
-
-const ApplicationLayout= () => {
-    return (
-        <>
-        <Header />
-        <Herosection />
-        <ProductLayout />
-        <Footer />
-        </>
-    );
-};
-
+import { RouterProvider } from "react-router-dom";
+import router from "./router/Router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<ApplicationLayout/>);
+root.render(<RouterProvider router={router} />);
