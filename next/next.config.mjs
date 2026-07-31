@@ -1,14 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
-    return [
-      // {
-      //   source: '/blogs',
-      //   destination: "/blogs",
-      //   permanent: true
-      // }
-    ]
-  }
+  /* config options here */
+  reactCompiler: true,
+  images: {
+    domains: ['ik.imagekit.io'],
+  },
 };
 
 export default nextConfig;

@@ -1,22 +1,25 @@
-"use client"
-
 import Link from "next/link";
 import "./style.css"
-import { useRouter } from "next/navigation";
+
 
 export default function Home() {
-  const router = useRouter()
-
   return (
     <>
-      <p className="paragraph">Hello World</p>
-      <p className="bg-green-500">Heading</p>
+      <p className="style">Home Page</p>
 
-      <Link href="/about">
-          <button>Go to About Page</button>
+      <p className="text-green-500">Home Page</p>
+
+      <Link href="/">
+        <button className="bg-amber-500">Home Page</button>
       </Link>
 
-      <button onClick={()=> router.push("/about")}>About Page</button>
+      <Link href="/about">
+        <button className="bg-amber-500">About Page</button>
+      </Link>
+      
+      <Link href="/blog">
+        <button className="bg-amber-500">Blog Page</button>
+      </Link>
     </>
   );
 }
